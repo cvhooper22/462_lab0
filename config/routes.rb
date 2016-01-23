@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'main/index'
   get 'lab1/:page' => "lab1#show"
+  get 'lab1/part2/return_info' => "lab1#return_info"
+  post 'lab1/part2/return_info' => "lab1#return_info"
+  get 'lab1/part2/redirect' => "lab1#redirect"
+  get 'lab1/part3/version' => "lab1#version"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -8,7 +12,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'main#index'
 
-  resources :lab1
+  # resources :lab1
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
